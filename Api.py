@@ -7,6 +7,10 @@ from PyPSAHandler import PyPSAHandler
 app = Flask(__name__)
 CORS(app)
 
+@app.route("/")
+def hello():
+    return "Hello World!"
+
 class Api(FlaskView):
     route_base = '/api/'
 
